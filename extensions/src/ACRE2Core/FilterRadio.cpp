@@ -87,7 +87,7 @@ acre::Result CFilterRadio::mixWhiteNoise(float *buffer, int numSamples, acre::vo
 CFilterRadio::CFilterRadio(void)
 {
     srand((unsigned int)time(0));
-    this->m_HighPass.setup (TS_SAMPLE_RATE, 750, 0.97);
+    this->m_HighPass.setup (TS_SAMPLE_RATE, 50, 0.97);
     this->m_LowPass.setup (TS_SAMPLE_RATE, 4000, 2.0);
     this->m_PinkNoise.clear();
 }
